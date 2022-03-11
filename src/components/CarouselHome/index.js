@@ -8,16 +8,13 @@ import "swiper/css/navigation";
 
 function CarouselHome() {
   return (
-    <>
+    <div>
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
           delay: 5500,
           disableOnInteraction: false,
-        }}
-        pagination={{
-          clickable: true,
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
@@ -31,7 +28,7 @@ function CarouselHome() {
           ))
         }
       </Swiper>
-    </>
+    </div>
   );
 }
 
