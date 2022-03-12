@@ -7,7 +7,9 @@ function Header() {
   return (
     <header className="bg-[#060B28] h-10 flex justify-evenly">
       <div className="self-center hover:border-[1px] hover:border-white p-[2px] rounded-sm">
-        <img src={AmazingIcon} alt="site icon" className="h-7"/>
+        <a href="/">
+          <img src={AmazingIcon} alt="site icon" className="h-7"/>
+        </a>
       </div>
       <div className="flex items-center">
         <input type="text" className="h-7 w-[500px] rounded-sm text-xs p-2 outline-[#ff9735] focus:outline focus:outline-2"/>

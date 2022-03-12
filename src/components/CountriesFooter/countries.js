@@ -1,0 +1,2 @@
+const countries = ['Austrália', 'Alemanha', 'Canadá', 'China', 'Cingapura', 'Espanha', 'Estados Unidos', 'França', 'Holanda', 'Índia', 'Itália', 'Japão', 'México', 'Polônia', 'Emirados', 'Árabes'];
+export default countries;
