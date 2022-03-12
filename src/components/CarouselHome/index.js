@@ -5,6 +5,7 @@ import Data from './DataImages';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "./style.css";
 
 function CarouselHome() {
   return (

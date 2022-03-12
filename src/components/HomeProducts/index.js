@@ -6,7 +6,7 @@ import Sandals from '../../assets/home-products/img-fifith-card.jpg';
 
 function HomeProducts() {
   return (
-    <section className="flex justify-evenly relative top-[-230px] z-[1]">
+    <section className="flex justify-evenly mt-[-230px] z-[1] relative">
       <CardFourImages infos={cardImages.weakConsumer}/>
       <CardFourImages infos={cardImages.devices}/>
       <div className="bg-white w-[230px] h-[260px] p-[10px]">
