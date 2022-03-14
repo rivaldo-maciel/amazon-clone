@@ -1,7 +1,7 @@
 import React from 'react';
 import LinksFooterUl from '../LinksFooterUl';
-import linksFooter from './linksFooter';
-import Logo from '../../assets/amazing.png';
+import linksFooter from '../Footer/linksFooter';
+import Logo from '../../../assets/amazing.png';
 import CountriesFooter from '../CountriesFooter';
 
 function Footer() {

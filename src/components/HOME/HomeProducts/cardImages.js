@@ -1,12 +1,12 @@
-import StarImage from '../../assets/home-products/img1-first-card.jpg';
-import PercentImage from '../../assets/home-products/img2-first-card.jpg';
-import LightningImage from '../../assets/home-products/img3-first-card.jpg';
-import TrophyImage from '../../assets/home-products/img4-first-card.jpg';
+import StarImage from '../../../assets/home-products/img1-first-card.jpg';
+import PercentImage from '../../../assets/home-products/img2-first-card.jpg';
+import LightningImage from '../../../assets/home-products/img3-first-card.jpg';
+import TrophyImage from '../../../assets/home-products/img4-first-card.jpg';
 
-import EchoDotImage from '../../assets/home-products/img1-third-card.jpg';
-import FireTvImage from '../../assets/home-products/img2-third-card.jpg';
-import KindleImage from '../../assets/home-products/img3-third-card.jpg';
-import EchoShowImage from '../../assets/home-products/img4-third-card.jpg';
+import EchoDotImage from '../../../assets/home-products/img1-third-card.jpg';
+import FireTvImage from '../../../assets/home-products/img2-third-card.jpg';
+import KindleImage from '../../../assets/home-products/img3-third-card.jpg';
+import EchoShowImage from '../../../assets/home-products/img4-third-card.jpg';
 
 const cardImages = {
   weakConsumer: {

@@ -1,8 +1,8 @@
 import React from 'react';
 import CardFourImages from '../CardFourImages';
 import cardImages from './cardImages';
-import FanImage from '../../assets/home-products/img-second-card.jpg';
-import Sandals from '../../assets/home-products/img-fifith-card.jpg';
+import FanImage from '../../../assets/home-products/img-second-card.jpg';
+import Sandals from '../../../assets/home-products/img-fifith-card.jpg';
 
 function HomeProducts() {
   return (

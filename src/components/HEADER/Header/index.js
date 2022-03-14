@@ -1,17 +1,21 @@
 import React from 'react';
 import { SearchIcon } from '@heroicons/react/solid';
-import CartIcon from '../../assets/Cart-Icon.svg';
-import AmazingIcon from '../../assets/amazing.png';
+import CartIcon from '../../../assets/Cart-Icon.svg';
+import AmazingIcon from '../../..//assets/amazing.png';
+import SelectCategories from '../SelectCategories';
+import {Link} from 'react-router-dom';
 
 function Header() {
   return (
     <header className="bg-[#060B28] h-10 flex justify-evenly">
+      <Link to='/products'>oioi</Link>
       <div className="self-center hover:border-[1px] hover:border-white p-[2px] rounded-sm">
         <a href="/">
           <img src={AmazingIcon} alt="site icon" className="h-7"/>
         </a>
       </div>
       <div className="flex items-center">
+        <SelectCategories />
         <input type="text" className="h-7 w-[500px] rounded-sm text-xs p-2 outline-[#ff9735] focus:outline focus:outline-2"/>
         <button
           className="bg-[#E7AB56] h-7 w-8 ml-[-32px] rounded-r-sm flex justify-center items-center hover:bg-[#E89A2C]"

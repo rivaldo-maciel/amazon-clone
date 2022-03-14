@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../../components/Header';
-import CarouselHome from '../../components/CarouselHome';
-import HomeProducts from '../../components/HomeProducts';
-import Footer from '../../components/Footer';
+import Header from '../../components/HEADER/Header';
+import CarouselHome from '../../components/HOME/CarouselHome';
+import HomeProducts from '../../components/HOME/HomeProducts';
+import Footer from '../../components/FOOTER/Footer';
 
 function Home() {
   return (
