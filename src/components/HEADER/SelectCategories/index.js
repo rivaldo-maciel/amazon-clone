@@ -14,7 +14,7 @@ function SelectCategories() {
 
   return (
     <select
-      className="mr-[-145px] z-[1] h-7 bg-[#e6e4e4] outline-[#ff9735] focus:outline focus:outline-2 rounded-l-sm text-[10px] w-auto cursor-pointer border-r-[1px] border-gray-300"
+      className="mr-[-146px] z-[1] h-7 bg-[#e6e4e4] outline-[#ff9735] focus:outline focus:outline-2 rounded-l-sm text-[10px] w-auto cursor-pointer border-r-[1px] border-gray-300"
     >
       <option>Todos</option>
       {

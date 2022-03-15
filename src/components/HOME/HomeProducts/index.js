@@ -8,7 +8,6 @@ function HomeProducts() {
   return (
     <section className="flex justify-evenly mt-[-230px] z-[1] relative">
       <CardFourImages infos={cardImages.weakConsumer}/>
-      <CardFourImages infos={cardImages.devices}/>
       <div className="bg-white w-[230px] h-[260px] p-[10px]">
         <div>
           <img src={FanImage} alt="fan" />
@@ -18,6 +17,7 @@ function HomeProducts() {
           </div>
         </div>
       </div>
+      <CardFourImages infos={cardImages.devices}/>
       <div className="bg-white w-[230px] h-[260px] p-[10px]">
         <div>
           <img src={Sandals} alt="air" />
