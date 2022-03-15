@@ -3,12 +3,10 @@ import { SearchIcon } from '@heroicons/react/solid';
 import CartIcon from '../../../assets/Cart-Icon.svg';
 import AmazingIcon from '../../..//assets/amazing.png';
 import SelectCategories from '../SelectCategories';
-import {Link} from 'react-router-dom';
 
 function Header() {
   return (
     <header className="bg-[#060B28] h-10 flex justify-evenly">
-      <Link to='/products'>oioi</Link>
       <div className="self-center hover:border-[1px] hover:border-white p-[2px] rounded-sm">
         <a href="/">
           <img src={AmazingIcon} alt="site icon" className="h-7"/>
@@ -25,8 +23,8 @@ function Header() {
       </div>
       <button>
         <div className="text-center">
-          <img src={CartIcon} alt="cart" className="h-7 "/>
-          <div className="absolute top-[2px] right-[112px] w-[18px]">
+          <img src={CartIcon} alt="cart" className="h-7"/>
+          <div className="absolute top-[2px] right-[108px] w-[18px]">
             <span className="text-[#DD5303] font-bold w-auto">0</span>
           </div>
         </div>
