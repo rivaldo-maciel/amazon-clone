@@ -1,9 +1,11 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useContext} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import {getProducts} from '../../../redux/actions';
+import productsContext from '../../../context/pruducts.context';
 
 function OrderProducts() {
   const { results, query } = useSelector(state => state.products);
+  const {setOrder} = useContext(productsContext);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,9 +29,13 @@ function OrderProducts() {
         </span>
       </div>
       <div className="text-[10px]">
-      <select className="h-[16px] mr-[10px] outline-[#3cc8eb] rounded-[5px] bg-[#e7e7e7] border border-[#9e9e9e]">
-          <option>Ordenar por: Preço: alto a baixo</option>
-          <option>Ordenar por: Preço: baixo a alto</option>
+      <select
+        className="h-[16px] mr-[10px] outline-[#3cc8eb] rounded-[5px] bg-[#e7e7e7] border border-[#9e9e9e]"
+        onChange={({target}) => setOrder(target.value)}
+      >
+          <option selected disabled>Ordenar Por:</option>
+          <option>Preço: alto a baixo</option>
+          <option>Preço: baixo a alto</option>
         </select>
       </div>
     </section>
