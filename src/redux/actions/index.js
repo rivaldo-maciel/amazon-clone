@@ -23,5 +23,5 @@ export const getCategories = () => async (dispatch) => {
 
 export const getProducts = (category, query) => async (dispatch) => {
   const products = await axios.get(`https://api.mercadolibre.com/sites/MLB/search?category=${category}_ID&q=${query}`);
-  return dispatch(getProductsAction(products));
+  return dispatch(getProductsAction(products.data));
 }

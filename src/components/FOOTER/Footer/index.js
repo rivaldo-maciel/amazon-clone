@@ -30,7 +30,7 @@ function Footer() {
           </div>
         </div>
       <div className="bg-[#131A22] h-[160px] flex justify-center items-center">
-        <p>Aplicação feita unicamente para fins de estudos, todos os direitos reservados á Amazon.com.br</p>
+        <p>Aplicação feita unicamente para fins de estudos, todos os direitos reservados á: amazon.com.br e mercadolivre.com.br</p>
       </div>
     </footer>
   );

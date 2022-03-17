@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import { useHistory } from 'react-router-dom';
 import {useDispatch, useSelector} from 'react-redux';
 import AppIcon from '../AppIcon';
 import SelectCategories from '../SelectCategories';
@@ -11,7 +12,15 @@ function Header() {
   const [category, setCategory] = useState('Todos');
   const [query, setQuery] = useState('');
   const categories = useSelector(state => state.saveCategories);
+  const products = useSelector(state => state.products);
   const dispatch = useDispatch();
+  const history = useHistory();
+
+  useEffect(() => {
+    if (products.results) {
+      history.push('/products');
+    } 
+  }, [history, products.results]);
 
   const handleChange = ({ target }, stateFunction) => {
     stateFunction(target.value);
@@ -20,6 +29,7 @@ function Header() {
   const searchProducts = () => {
     const selectedCategory = categories.find((currCategory) => currCategory.name = category);
     dispatch(getProducts(selectedCategory.id, query));
+    localStorage.setItem('search', JSON.stringify({searchQuery: query, category: selectedCategory.id}));
   }
 
   return (
