@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getCategories} from '../../../redux/actions';
 
-function SelectCategories() {
+function SelectCategories({ handleChange, setCategory }) {
   const dispatch = useDispatch();
   const categories = useSelector(state => state.saveCategories);
 
@@ -15,6 +15,7 @@ function SelectCategories() {
   return (
     <select
       className="mr-[-146px] z-[1] h-7 bg-[#e6e4e4] outline-[#ff9735] focus:outline focus:outline-2 rounded-l-sm text-[10px] w-auto cursor-pointer border-r-[1px] border-gray-300"
+      onChange={(e) => handleChange(e, setCategory)}
     >
       <option>Todos</option>
       {

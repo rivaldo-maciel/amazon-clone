@@ -1,9 +1,13 @@
 import React from 'react';
 import Header from '../../components/HEADER/Header';
+import Footer from '../../components/FOOTER/Footer';
 
 function Products() {
   return (
-    <Header />
+    <div>
+      <Header />
+      <Footer />
+    </div>
   );
 }
 
