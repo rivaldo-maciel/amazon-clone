@@ -13,7 +13,6 @@ function OrderProducts() {
       const {category, searchQuery} = JSON.parse(localStorage.getItem('search'));
       dispatch(getProducts(category, searchQuery));
     }
-    console.log(results);
   }, [dispatch, results]);
 
   return (

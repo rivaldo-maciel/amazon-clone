@@ -1,4 +1,5 @@
 import React, {useContext} from 'react';
+import { Link } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import CardProduct from '../cardProduct';
 import productsContext from '../../../context/pruducts.context';
@@ -11,12 +12,17 @@ function ListProducts() {
       {
         products.sort((a, b) => order === 'Preço: alto a baixo' ? b.price - a.price : a.price - b.price)
         .map((product) => (
-          <CardProduct
-            title={product.title}
-            price={product.price}
-            thumbnail={product.thumbnail}
-            id={product.id}
-          />
+          <Link
+            to={`/products/${product.id}`}
+            className="w-[150px] h-[250px shadow-md"
+            key={product.id}
+          >
+            <CardProduct
+              title={product.title}
+              price={product.price}
+              thumbnail={product.thumbnail}
+            />
+          </Link>
         ))
       }
     </section>
