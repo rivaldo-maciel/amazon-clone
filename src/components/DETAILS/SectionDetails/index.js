@@ -5,6 +5,8 @@ import Stars from '../../../assets/stars.png'
 import dataIcons from '../iconDetails/dataIcons';
 import IconDetails from '../iconDetails';
 import SideBar from '../SideBar';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+import InnerImageZoom from 'react-inner-image-zoom';
 
 
 function SectionDetails() {
@@ -20,13 +22,16 @@ function SectionDetails() {
     <section className="flex self-center mt-[40px]">
       <div className="flex">
         <div>
-            <img
+            <InnerImageZoom
               src={pictures && pictures[0].url}
               alt="procut"
-              className="w-[180px]"
+              className="w-[280px]"
+              zoomPreload={true}
+              zoomType="hover"
+              zoomScale={1}
             />
         </div>
-        <div className="ml-[40px]">
+        <div className="ml-[20px]">
         <div className="w-[270px] border-b border-[#cfcfcf] items-center mt-[8px]">
           <span>{title}</span>
           <img src={Stars} alt="stars" className="w-[80px] mb-[5px]"/>
