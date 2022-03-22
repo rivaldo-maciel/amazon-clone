@@ -26,7 +26,9 @@ function SideBar({ price }) {
           <label className="text-[11px]">
             Quantidade:
             <select className="ml-[3px] w-[30px] h-[20px]">
-              {Array.from(Array(30).keys()).map((number) => (
+              {Array.from(Array(31).keys())
+              .filter((numb) => numb !== 0)
+              .map((number) => (
                 <option key={number}>{number}</option>
               ))}
             </select>

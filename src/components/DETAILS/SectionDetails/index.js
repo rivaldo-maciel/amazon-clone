@@ -7,28 +7,38 @@ import IconDetails from '../iconDetails';
 import SideBar from '../SideBar';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
 import InnerImageZoom from 'react-inner-image-zoom';
+import AdditionalPhotos from '../AdditionalPhotos';
 
 
 function SectionDetails() {
   const [details, setDetails] = useState({});
   const { title, price, pictures } = details;
+  const [productPicture, setProductPicture] = useState({});
   const { id } = useParams();
 
   useEffect(() => {
     getProductDetails(id).then(({ data }) => setDetails(data));
   }, [id]);
 
+  useEffect(() => {
+    setProductPicture(pictures && pictures[0].url);
+  }, [pictures]);
+
   return (
     <section className="flex self-center mt-[40px]">
+      <AdditionalPhotos
+        pictures={pictures && pictures}
+        setProductPicture={setProductPicture}
+      />
       <div className="flex">
         <div>
             <InnerImageZoom
-              src={pictures && pictures[0].url}
+              src={productPicture}
               alt="procut"
-              className="w-[280px]"
               zoomPreload={true}
               zoomType="hover"
               zoomScale={1}
+              width={180}
             />
         </div>
         <div className="ml-[20px]">
