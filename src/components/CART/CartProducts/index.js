@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React from 'react';
 import CardProduct from '../CardProduct';
 
-function CartProducts() {
-  const [reload, setReload] = useState(false);
+function CartProducts({ setReload }) {
   const cartList = JSON.parse(localStorage.getItem('cart'));
+  const total = cartList.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0);
 
   return (
     <section className="bg-white w-[70%] p-[12px]">
@@ -22,6 +22,10 @@ function CartProducts() {
             />
           ))
         }
+        <div className="flex justify-end">
+          <span className="text-[12px]">{`Subtotal (${cartList.length} itens):`}</span>
+          <span className="text-[12px] font-bold ml-[3px]">{`R$ ${total.toFixed(2)}`}</span>
+        </div>
     </section>
   );
 }

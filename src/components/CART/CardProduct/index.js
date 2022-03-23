@@ -12,6 +12,10 @@ function CardProduct({ title, price, thumbnail, quantity, setReload }) {
   }, [qnty, title])
 
   useEffect(() => {
+    setReload(prevState => !prevState);
+  }, [qnty, setReload])
+
+  useEffect(() => {
     setQnty(quantity);
   }, [quantity])
 
@@ -39,7 +43,9 @@ function CardProduct({ title, price, thumbnail, quantity, setReload }) {
           <select
             value={qnty}
             className="text-[12px] h-[20px] shadow-md outline-[#3cc8eb] rounded-[5px] bg-[#e7e7e7] border border-[#9e9e9e]"
-            onChange={({ target }) => setQnty(target.value)}
+            onChange={({ target }) => {
+              setQnty(target.value)
+            }}
           >
             {Array.from(Array(31).keys())
               .filter((numb) => numb !== 0)
