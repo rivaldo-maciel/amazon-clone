@@ -31,7 +31,7 @@ function SectionDetails() {
         setProductPicture={setProductPicture}
       />
       <div className="flex">
-        <div>
+        <div className="mt-[20px]">
             <InnerImageZoom
               src={productPicture}
               alt="procut"
@@ -63,7 +63,11 @@ function SectionDetails() {
         </div>
         </div>
       </div>
-      <SideBar price={price} />
+      <SideBar
+        price={price}
+        title={title}
+        thumbnail={pictures && pictures[0].url}
+        />
     </section>
   );
 }

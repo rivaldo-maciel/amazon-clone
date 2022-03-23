@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { useHistory } from 'react-router-dom';
 import IconLocation from '../../../assets/location.png';
 import Padlock from '../../../assets/padlock-sidebar.png';
 
-function SideBar({ price }) {
+function SideBar({ title, price, thumbnail }) {
+  const [quantity, setQuantity] = useState(1);
+  const history = useHistory();
+
+  const saveOnCart = async (title, price, thumbnail, quantity) => {
+    const item = { title, price, thumbnail, quantity };
+    const cartList = JSON.parse(localStorage.getItem('cart'));
+    localStorage.setItem('cart', JSON.stringify([...cartList, item]));
+    localStorage.setItem('itemPic', JSON.stringify(thumbnail));
+    history.push('/prevcart');
+  }
   return (
     <aside className="border border-[#969696] w-[200px] p-[10px] rounded-md ml-[10px]">
       <div>
@@ -25,7 +36,11 @@ function SideBar({ price }) {
         <div className="mt-[10px]">
           <label className="text-[11px]">
             Quantidade:
-            <select className="ml-[3px] w-[30px] h-[20px]">
+            <select
+              className="ml-[3px] w-[30px] h-[20px]"
+              onChange={(e) => setQuantity(Number(e.target.value))}
+              value={quantity}
+            >
               {Array.from(Array(31).keys())
               .filter((numb) => numb !== 0)
               .map((number) => (
@@ -38,6 +53,7 @@ function SideBar({ price }) {
           <button
             type="button"
             className="bg-[#f3c136] text-[10px] h-[22px] w-[180px] rounded-full"
+            onClick={() => saveOnCart(title, price, thumbnail, quantity)}
           >
             Adicionar ao carrinho
           </button>

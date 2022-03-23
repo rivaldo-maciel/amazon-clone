@@ -6,7 +6,7 @@ function AdditionalPhotos({ pictures, setProductPicture }) {
       {
         pictures && pictures.filter((_pic, index) => index <= 3)
         .map((picture) => (
-          <div onClick={() => setProductPicture(picture.url)}>
+          <div onClick={() => setProductPicture(picture.url)} key={picture.url}>
             <img className="w-[50px] mt-[10px] border border-[#ebebeb] cursor-pointer" src={picture.url} alt="product" />
           </div>
         ))

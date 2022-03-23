@@ -14,7 +14,7 @@ function ListProducts() {
         .map((product) => (
           <Link
             to={`/products/${product.id}`}
-            className="w-[150px] h-[250px shadow-md"
+            className="w-[150px] h-[250px shadow-md border border-[#e4e4e4]"
             key={product.id}
           >
             <CardProduct

@@ -1,0 +1,10 @@
+.swiper-button-prev, .swiper-button-next {
+  color: rgb(49, 48, 48);
+  top: 200px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 20px;
+}
