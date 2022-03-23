@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import Header from '../../components/HEADER/Header';
 import Footer from '../../components/FOOTER/Footer';
 import IconCheck from '../../assets/check.png';
@@ -8,6 +9,7 @@ function PrevCart() {
   const src = JSON.parse(localStorage.getItem('itemPic'));
   const cartList = JSON.parse(localStorage.getItem('cart'));
   const total = cartList.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0);
+  const history = useHistory();
 
   return (
     <main>
@@ -28,13 +30,14 @@ function PrevCart() {
               <p className="font-bold">R${total.toFixed(2)}</p>
               <button
                 type="button"
-                className="bg-[#f3c136] rounded-md mt-[10px] text-[12px] h-[25px] hover:bg-[#e0a912]"
+                className="bg-[#FFD814] rounded-md mt-[10px] text-[12px] h-[25px] hover:bg-[#f3c136]"
               >
                 Fechar pedido
               </button>
               <button
                 type="button"
-                className="shadow rounded-md mt-[10px] border border-[#c9c9c9] text-[12px] h-[25px] hover:bg-[#c9c9c9]"
+                className="shadow rounded-md mt-[10px] border border-[#c9c9c9] text-[12px] h-[25px] hover:bg-[#dfdede]"
+                onClick={() => history.push('/cart')}
                 >
                   Ir para o carrinho
                 </button>

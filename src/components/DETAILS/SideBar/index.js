@@ -8,9 +8,18 @@ function SideBar({ title, price, thumbnail }) {
   const history = useHistory();
 
   const saveOnCart = async (title, price, thumbnail, quantity) => {
-    const item = { title, price, thumbnail, quantity };
+    const newItem = { title, price, thumbnail, quantity };
     const cartList = JSON.parse(localStorage.getItem('cart'));
-    localStorage.setItem('cart', JSON.stringify([...cartList, item]));
+    const item = cartList.find((it) => it.title === newItem.title);
+    if (item) {
+      item.quantity += newItem.quantity;
+      const newCartList = cartList.filter((it) => it.title !== newItem.title);
+      localStorage.setItem('cart', JSON.stringify([...newCartList, item]));
+      localStorage.setItem('itemPic', JSON.stringify(thumbnail));
+      history.push('/prevcart');
+      return
+    } 
+    localStorage.setItem('cart', JSON.stringify([...cartList, newItem]));
     localStorage.setItem('itemPic', JSON.stringify(thumbnail));
     history.push('/prevcart');
   }

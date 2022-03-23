@@ -14,9 +14,18 @@ function CarouselProducts() {
   const history = useHistory();
 
   const saveOnCart = async (title, price, thumbnail) => {
-    const item = { title, price, thumbnail, quantity: 1 };
+    const newItem = { title, price, thumbnail, quantity: 1 };
     const cartList = JSON.parse(localStorage.getItem('cart'));
-    localStorage.setItem('cart', JSON.stringify([...cartList, item]));
+    const item = cartList.find((it) => it.title === newItem.title);
+    if (item) {
+      item.quantity += newItem.quantity;
+      const newCartList = cartList.filter((it) => it.title !== newItem.title);
+      localStorage.setItem('cart', JSON.stringify([...newCartList, item]));
+      localStorage.setItem('itemPic', JSON.stringify(thumbnail));
+      history.push('/prevcart');
+      return
+    } 
+    localStorage.setItem('cart', JSON.stringify([...cartList, newItem]));
     localStorage.setItem('itemPic', JSON.stringify(thumbnail));
     history.push('/prevcart');
   }
@@ -36,7 +45,7 @@ function CarouselProducts() {
         {
           results.filter((_product, index) => index <= 11)
           .map((product) => (
-            <SwiperSlide>
+            <SwiperSlide key={product.title}>
               <div className="w-[160px] flex flex-col">
                 <Link to={`/products/${product.id}`} className="flex flex-col">
                   <img src={product.thumbnail} alt="product" className="h-[80px] self-center"/>

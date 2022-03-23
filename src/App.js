@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
 import PrevCart from './pages/PrevCart';
+import Cart from './pages/Cart';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
         <Route exact path="/products" component={Products} />
         <Route  path="/products/:id" component={ProductDetails} />
         <Route path="/prevcart" component={PrevCart} />
-        <Route  path="/cart" component={() => {}} />
+        <Route  path="/cart" component={Cart} />
       </Switch>
     </BrowserRouter>
   );
