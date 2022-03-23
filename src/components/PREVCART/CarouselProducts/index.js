@@ -31,7 +31,7 @@ function CarouselProducts() {
         loopFillGroupWithBlank={true}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper flex h-[200px]"
+        className="mySwiper flex h-[200px] swiper-products"
       >
         {
           results.filter((_product, index) => index <= 11)
