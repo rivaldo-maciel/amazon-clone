@@ -4,11 +4,13 @@ function CardProduct({ title, price, thumbnail, quantity, setReload }) {
   const [qnty, setQnty] = useState(1);
 
   useEffect(() => {
-    const cartList = JSON.parse(localStorage.getItem('cart'));
-    const newCarList = cartList.filter((product) => product.title !== title);
-    const editedItem = cartList.find((product) => product.title === title);
-    editedItem.quantity = qnty;
-    localStorage.setItem('cart', JSON.stringify([...newCarList, editedItem]));
+    if (qnty >= 1) {
+      const cartList = JSON.parse(localStorage.getItem('cart'));
+      const newCarList = cartList.filter((product) => product.title !== title);
+      const editedItem = cartList.find((product) => product.title === title);
+      editedItem.quantity = qnty;
+      localStorage.setItem('cart', JSON.stringify([...newCarList, editedItem]));
+    }
   }, [qnty, title])
 
   useEffect(() => {
