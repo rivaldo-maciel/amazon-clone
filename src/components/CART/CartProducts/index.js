@@ -19,6 +19,7 @@ function CartProducts({ setReload }) {
               thumbnail={product.thumbnail}
               quantity={product.quantity}
               setReload={setReload}
+              key={product.thumbnail}
             />
           ))
         }

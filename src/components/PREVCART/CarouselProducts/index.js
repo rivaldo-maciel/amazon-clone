@@ -45,7 +45,7 @@ function CarouselProducts() {
         {
           results.filter((_product, index) => index <= 11)
           .map((product) => (
-            <SwiperSlide key={product.title}>
+            <SwiperSlide key={product.thumbnail}>
               <div className="w-[160px] flex flex-col">
                 <Link to={`/products/${product.id}`} className="flex flex-col">
                   <img src={product.thumbnail} alt="product" className="h-[80px] self-center"/>
