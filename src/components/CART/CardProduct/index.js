@@ -15,10 +15,6 @@ function CardProduct({ title, price, thumbnail, quantity, setReload }) {
     setReload(prevState => !prevState);
   }, [qnty, setReload])
 
-  /* useEffect(() => {
-    setQnty(quantity);
-  }, [quantity]) */
-
   const deleteProduct = () => {
     const cartList = JSON.parse(localStorage.getItem('cart'));
     const itemToDelete = cartList.find((product) => product.title === title);

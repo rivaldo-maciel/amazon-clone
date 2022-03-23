@@ -11,6 +11,9 @@ function SideBar({ title, price, thumbnail }) {
     const newItem = { title, price, thumbnail, quantity };
     const cartList = JSON.parse(localStorage.getItem('cart'));
     const item = cartList.find((it) => it.title === newItem.title);
+    if (item && item.quantity === 30) {
+      return alert('limite de quantidade de produto atingido(30)');
+    }
     if (item) {
       item.quantity += newItem.quantity;
       const newCartList = cartList.filter((it) => it.title !== newItem.title);

@@ -24,7 +24,12 @@ function CartProducts({ setReload }) {
           ))
         }
         <div className="flex justify-end">
-          <span className="text-[12px]">{`Subtotal (${cartList.length} itens):`}</span>
+          <span
+            className="text-[12px]"
+          >{
+            cartList.length === 1 ? `Subtotal (${cartList.length} item):` : `Subtotal (${cartList.length} itens):`
+          }
+        </span>
           <span className="text-[12px] font-bold ml-[3px]">{`R$ ${total.toFixed(2)}`}</span>
         </div>
     </section>
