@@ -3,6 +3,7 @@ import Header from '../../components/HEADER/Header';
 import Footer from '../../components/FOOTER/Footer';
 import CartProducts from '../../components/CART/CartProducts';
 import CardTotal from '../../components/CART/CardTotal';
+import CartSideBar from '../../components/CART/CartSideBar';
 
 function Cart() {
   const [reload, setReload] = useState(false);
@@ -12,10 +13,17 @@ function Cart() {
       <Header />
         <div className="p-[20px] flex justify-center">
           <CartProducts setReload={setReload}/>
+          <div>
           {
             cartList.length > 0 
-            && <CardTotal />
+            && (
+              <>
+                <CardTotal />
+                <CartSideBar />
+              </>
+            )
           }
+          </div>
         </div>
       <Footer />
     </main>
