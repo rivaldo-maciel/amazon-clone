@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import Stars from '../../../assets/stars.png';
 
@@ -31,7 +31,7 @@ function CartSideBar() {
       </div>
       {
         products.map((product) => (
-          <div className="flex mt-[10px]">
+          <Link to={`/products/${product.id}`} className="flex mt-[10px]">
             <div>
               <img src={product.thumbnail} alt="product" className="w-[60px]" />
             </div>
@@ -47,7 +47,7 @@ function CartSideBar() {
                 Adicionar ao carrinho
               </button>
             </div>
-          </div>
+          </Link>
         ))
       }
     </aside>
