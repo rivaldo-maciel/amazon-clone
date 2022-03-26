@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useHistory } from 'react-router-dom';
 import amazingBlack from '../../assets/amazing-black.png';
 import AlertMessage from '../../components/LOGIN/AlertMessage';
 
@@ -7,17 +8,24 @@ function Login() {
   const [password, setPassword] = useState('');
   const [emptyInput, setEmptyInput] = useState(false);
   const emptyMessage = "preencha todos os campos";
+  const history = useHistory();
 
   const validateInputs = () => {
     if (emailNumber === '' || password === '') {
       setEmptyInput(true);
     }
-  }
+    saveUserData();
+  };
+
+  const saveUserData = () => {
+    localStorage.setItem('user', JSON.stringify({ emailNumber, password }));
+    history.push('/address');
+  };
 
   return (
     <main className="flex flex-col justify-center items-center">
       <img className="w-[100px] p-[10px]" src={amazingBlack} alt="site-icon" />
-      <form className="flex flex-col border border-[#d3d3d3] w-[250px] rounded-[4px] p-[20px]">
+      <form className="flex flex-col border border-[#d3d3d3] w-[230px] rounded-[2px] p-[20px]">
         <h1 className="text-[20px]">Fazer login</h1>
         <label className="flex flex-col text-[9px] font-bold mt-[10px]">
           E-mail ou número de telefone celular
@@ -42,8 +50,9 @@ function Login() {
         <button
           type="button"
           className="text-[10px] bg-gradient-to-t from-[#f0c14b] to-[#f7dfa5] hover:brightness-[96%] rounded-[2px] border border-[#a88734] mt-[10px] h-[22px]"
-          onClick={() => {
-            validateInputs()
+          onClick={(e) => {
+            e.preventDefault();
+            validateInputs();
           }}
         >
           Fazer Login
