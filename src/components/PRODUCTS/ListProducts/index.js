@@ -10,7 +10,8 @@ function ListProducts() {
   return (
     <section className="grid grid-cols-6 gap-2 p-[30px]">
       {
-        products.sort((a, b) => order === 'Preço: alto a baixo' ? b.price - a.price : a.price - b.price)
+        products 
+        && products.sort((a, b) => order === 'Preço: alto a baixo' ? b.price - a.price : a.price - b.price)
         .map((product) => (
           <Link
             to={`/products/${product.id}`}

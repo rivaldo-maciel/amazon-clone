@@ -31,7 +31,11 @@ function CartSideBar() {
       </div>
       {
         products.map((product) => (
-          <Link to={`/products/${product.id}`} className="flex mt-[10px]">
+          <Link
+            to={`/products/${product.id}`}
+            className="flex mt-[10px]"
+            key={product.id}
+          >
             <div>
               <img src={product.thumbnail} alt="product" className="w-[60px]" />
             </div>

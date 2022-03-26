@@ -13,7 +13,7 @@ import AdditionalPhotos from '../AdditionalPhotos';
 function SectionDetails() {
   const [details, setDetails] = useState({});
   const { title, price, pictures } = details;
-  const [productPicture, setProductPicture] = useState({});
+  const [productPicture, setProductPicture] = useState('');
   const { id } = useParams();
 
   useEffect(() => {

@@ -5,6 +5,7 @@ import Products from './pages/Products';
 import ProductDetails from './pages/ProductDetails';
 import PrevCart from './pages/PrevCart';
 import Cart from './pages/Cart';
+import Login from './pages/Login';
 
 function App() {
   return (
@@ -12,9 +13,10 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/products" component={Products} />
-        <Route  path="/products/:id" component={ProductDetails} />
+        <Route path="/products/:id" component={ProductDetails} />
         <Route path="/prevcart" component={PrevCart} />
-        <Route  path="/cart" component={Cart} />
+        <Route path="/cart" component={Cart} />
+        <Route path="/login" component={Login} />
       </Switch>
     </BrowserRouter>
   );

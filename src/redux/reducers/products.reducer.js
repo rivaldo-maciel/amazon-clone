@@ -1,6 +1,6 @@
 import {GET_PRODUCTS} from '../actions';
 
-const INITAL_STATE = [];
+const INITAL_STATE = {};
 
 const products = (state=INITAL_STATE, action) => {
   switch(action.type) {
