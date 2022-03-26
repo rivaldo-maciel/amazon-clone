@@ -6,6 +6,7 @@ import ProductDetails from './pages/ProductDetails';
 import PrevCart from './pages/PrevCart';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
+import Address from './pages/Address';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/prevcart" component={PrevCart} />
         <Route path="/cart" component={Cart} />
         <Route path="/login" component={Login} />
+        <Route path="/address" component={Address} />
       </Switch>
     </BrowserRouter>
   );
