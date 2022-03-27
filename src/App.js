@@ -7,6 +7,7 @@ import PrevCart from './pages/PrevCart';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Address from './pages/Address';
+import PaymentMethod from './pages/PaymentMethod';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/cart" component={Cart} />
         <Route path="/login" component={Login} />
         <Route path="/address" component={Address} />
+        <Route path="/payment-method" component={PaymentMethod} />
       </Switch>
     </BrowserRouter>
   );
