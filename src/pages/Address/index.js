@@ -7,6 +7,8 @@ function Address() {
   const [country, setCountry] = useState('Afeganistão');
   const [name, setName] = useState('');
   const [address, setAddress] = useState('');
+  const [residenceNumber, setResidenceNumber] = useState('');
+  const [district, setDistrict] = useState('');
   const [city, setCity] = useState('');
   const [state, setState] = useState('');
   const [cep, setCep] = useState('');
@@ -16,7 +18,17 @@ function Address() {
 
   const saveUserData = () => {
     const user = JSON.parse(localStorage.getItem('user'));
-    user.data = {country, name, address, city, state, cep, phone};
+    user.data = {
+      country,
+      name,
+      address,
+      residenceNumber,
+      district,
+      city,
+      state,
+      cep,
+      phone,
+    };
     localStorage.setItem('user', JSON.stringify(user));
     history.push('/payment-method');
   }
@@ -64,6 +76,22 @@ function Address() {
             placeholder="Endereço, caixa postal, nome da empresa, A/C"
             className="border border-[#bcc1c8] h-[20px] text-[10px] rounded-[2px] outline-none p-[5px]"
             onChange={({target}) => setAddress(target.value)}
+          />
+        </label>
+        <label className="flex flex-col mt-[15px] text-[10px] font-[800]">
+          Número da residência
+          <input
+            type="text"
+            className="border border-[#bcc1c8] h-[20px] text-[10px] rounded-[2px] outline-none p-[5px]"
+            onChange={({target}) => setResidenceNumber(target.value)}
+          />
+        </label>
+        <label className="flex flex-col mt-[15px] text-[10px] font-[800]">
+          Bairro
+          <input
+            type="text"
+            className="border border-[#bcc1c8] h-[20px] text-[10px] rounded-[2px] outline-none p-[5px]"
+            onChange={({target}) => setDistrict(target.value)}
           />
         </label>
         <label className="flex flex-col mt-[15px] text-[10px] font-[800]">

@@ -8,6 +8,7 @@ import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Address from './pages/Address';
 import PaymentMethod from './pages/PaymentMethod';
+import ConfirmRequest from './pages/ConfirmRequest';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/login" component={Login} />
         <Route path="/address" component={Address} />
         <Route path="/payment-method" component={PaymentMethod} />
+        <Route path="/confirm-request" component={ConfirmRequest} />
       </Switch>
     </BrowserRouter>
   );

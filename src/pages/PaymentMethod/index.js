@@ -10,7 +10,7 @@ function PaymentMethod() {
 
   const savePaymentMethod = (paymentMetohd) => {
     const user = JSON.parse(localStorage.getItem('user'));
-    user.paymentMethod = paymentMetohd;
+    user.data.paymentMethod = paymentMetohd;
     localStorage.setItem('user', JSON.stringify(user));
     history.push('/confirm-request');
   }
