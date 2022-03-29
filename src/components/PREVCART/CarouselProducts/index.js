@@ -45,11 +45,11 @@ function CarouselProducts() {
         {
           results.filter((_product, index) => index <= 11)
           .map((product) => (
-            <SwiperSlide key={product.thumbnail}>
+            <SwiperSlide key={product.id}>
               <div className="w-[160px] flex flex-col">
                 <Link to={`/products/${product.id}`} className="flex flex-col">
                   <img src={product.thumbnail} alt="product" className="h-[80px] self-center"/>
-                  <p className="text-[10px] mt-[10px] text-[#007185]">{product.title}</p>
+                  <p className="text-[10px] mt-[10px] text-[#007185] line-clamp-1 overflow-hidden text-ellipsis">{product.title}</p>
                   <img src={Stars} alt="stars" className="w-[60px]"/>
                   <div>
                     <span>R$</span>
