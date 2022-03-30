@@ -9,8 +9,9 @@ function CardTotal() {
   const closeOrder = () => {
     const user = JSON.parse(localStorage.getItem('user'));
     if (!user) {
-      history.push('/login');
+      return history.push('/login');
     }
+    return history.push('/confirm-request');
   }
   return (
     <div className="bg-white p-[20px] ml-[30px] h-[110px]">
