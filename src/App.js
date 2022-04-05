@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Address from './pages/Address';
 import PaymentMethod from './pages/PaymentMethod';
 import ConfirmRequest from './pages/ConfirmRequest';
+import FinishPayment from './pages/FinishPayment';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/address" component={Address} />
         <Route path="/payment-method" component={PaymentMethod} />
         <Route path="/confirm-request" component={ConfirmRequest} />
+        <Route path="/finish-payment" component={FinishPayment} />
       </Switch>
     </BrowserRouter>
   );

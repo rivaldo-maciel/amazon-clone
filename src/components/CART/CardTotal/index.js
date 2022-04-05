@@ -11,7 +11,7 @@ function CardTotal() {
     if (!user) {
       return history.push('/login');
     }
-    return history.push('/confirm-request');
+    return history.push('/payment-method');
   }
   return (
     <div className="bg-white p-[20px] ml-[30px] h-[110px]">
