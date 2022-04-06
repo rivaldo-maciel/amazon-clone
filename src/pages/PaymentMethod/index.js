@@ -60,6 +60,7 @@ function PaymentMethod() {
             type="button"
             className="text-[10px] bg-gradient-to-t from-[#f0c14b] to-[#f7dfa5] hover:brightness-[96%] rounded-[2px] border border-[#a88734] h-[22px]"
             onClick={() => savePaymentMethod(method)}
+            disabled={method === '' && true }
           >
             Continuar
           </button>

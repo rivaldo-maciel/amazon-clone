@@ -53,7 +53,7 @@ function ConfirmRequest() {
             <div>
               <p className="font-bold">Forma de pagamento</p>
               <div className="flex">
-                {paymentMethod === "boleto" ? (
+                {paymentMethod === "Boleto" ? (
                   <img
                     src={BarCode}
                     alt="bar code"
