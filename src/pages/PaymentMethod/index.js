@@ -8,9 +8,9 @@ function PaymentMethod() {
   const [method, setMethod] = useState('');
   const history = useHistory();
 
-  const savePaymentMethod = (paymentMetohd) => {
+  const savePaymentMethod = (paymentMethod) => {
     const user = JSON.parse(localStorage.getItem('user'));
-    user.data.paymentMethod = paymentMetohd;
+    user.data.paymentMethod = paymentMethod;
     localStorage.setItem('user', JSON.stringify(user));
     history.push('/confirm-request');
   }

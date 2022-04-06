@@ -5,7 +5,7 @@ import BarCode from '../../../assets/barCodeImage.jpeg';
 function BankSlip() {
   const total = JSON.parse(localStorage.getItem('endTotal'));
   return (
-    <div className='text-[10px] w-[500px] mt-[5px] bg-white p-[10px] border-[1.5px] border-l-[8px] border-[#FFAF38] rounded-[5px]'>
+    <div className='text-[10px] w-[500px] mt-[10px] bg-white p-[10px] border-[1.5px] border-l-[8px] border-[#FFAF38] rounded-[5px]'>
       <div className="flex">
         <img src={Alert} alt="alert" className="w-[15px]" />
         <span className="ml-[10px]">

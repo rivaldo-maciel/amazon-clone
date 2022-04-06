@@ -11,7 +11,7 @@ function Pix() {
   const expireIn = moment(currHour, 'hh:mm').add(30, 'minutes').format('hh:mm');
   const total = JSON.parse(localStorage.getItem('endTotal'));
   return (
-    <div className="text-[10px] w-[550px] mt-[5px] bg-white p-[10px] border-[1.5px] border-l-[8px] border-[#FFAF38] rounded-[5px]">
+    <div className="text-[10px] w-[550px] mt-[10px] bg-white p-[10px] border-[1.5px] border-l-[8px] border-[#FFAF38] rounded-[5px]">
       <div className="flex">
         <img src={Alert} alt="alert" className="w-[15px]" />
         <span className="font-bold ml-[8px]">Vencimento</span>
