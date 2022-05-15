@@ -1,4 +1,3 @@
 # Amazon Clone
 
-![home](home.png)
-
+<img src="./home.png" />
