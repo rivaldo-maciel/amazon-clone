@@ -1,3 +1,3 @@
 # Amazon Clone
 
-<img src="./home.png" />
+<img src="/home.png" />
