@@ -14,6 +14,14 @@ function PrevCart() {
   );
   const history = useHistory();
 
+  const closeOrder = () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    if (!user) {
+      return history.push('/login');
+    }
+    return history.push('/payment-method');
+  }
+
   return (
     <main>
       <Header />
@@ -44,6 +52,7 @@ function PrevCart() {
             <button
               type="button"
               className="bg-[#FFD814] rounded-md mt-[10px] text-[12px] h-[25px] hover:bg-[#f3c136]"
+              onClick={closeOrder}
             >
               Fechar pedido
             </button>

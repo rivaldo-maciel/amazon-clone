@@ -33,6 +33,7 @@ function Header() {
         <SelectCategories
           handleChange={handleChange}
           setCategory={setCategory}
+          category={category}
         />
         <SearchInput
           handleChange={handleChange}

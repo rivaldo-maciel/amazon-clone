@@ -9,7 +9,7 @@ function CartButton() {
       <Link to="/cart">
         <div className="text-center">
           <img src={CartIcon} alt="cart" className="h-7" />
-          <div className="absolute top-[2px] right-[108px] w-[18px]">
+          <div className="absolute top-[2px] right-[110px] w-[18px]">
             <span className="text-[#DD5303] font-bold w-auto">
               {cartList ? cartList.length : 0}
             </span>

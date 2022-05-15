@@ -2,11 +2,11 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import "./styles.css";
-import { Pagination, Navigation } from "swiper";
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import './styles.css';
+import { Pagination, Navigation } from 'swiper';
 import Stars from '../../../assets/stars.png';
 
 function CarouselProducts() {

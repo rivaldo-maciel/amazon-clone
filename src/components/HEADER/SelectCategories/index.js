@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {getCategories} from '../../../redux/actions';
 
-function SelectCategories({ handleChange, setCategory }) {
+function SelectCategories({ handleChange, setCategory, category }) {
   const dispatch = useDispatch();
   const categories = useSelector(state => state.saveCategories);
 
