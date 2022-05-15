@@ -44,7 +44,7 @@ Este projeto é um clone simplificado do site [www.amazon.com.br](https://www.am
 <img src="/confirm-request.png">
 
 ### Finish Payment
-<img src="/finish-payment">
+<img src="/finish-payment.png">
 
 
 ## Link 
