@@ -46,8 +46,10 @@ Este projeto é um clone simplificado do site [www.amazon.com.br](https://www.am
 ### Finish Payment
 <img src="/finish-payment.png">
 
+## To Do
 
-## Link 
+- Implomentar testes unitários e de integração
+- Deploy
 
 
 
