@@ -3,9 +3,9 @@ import Star from '../../../assets/stars.png';
 
 function CardProduct({ title, price, thumbnail, id }) {
   return (
-      <div>
+      <div className="p-[10px]">
         <div className="flex justify-center">
-          <img className="w-[100px]" src={thumbnail} alt="product" />
+          <img className="w-[120px]" src={thumbnail} alt="product" />
         </div>
         <div className="mt-[10px]">
           <p className="text-[12px]">{title}</p>
