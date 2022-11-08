@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useHistory } from 'react-router-dom';
-import amazingBlack from '../../assets/amazing-black.png';
+import Icon from '../../assets/amazon-logo-black.png';
 import AlertMessage from '../../components/LOGIN/AlertMessage';
 
 function Login() {
@@ -24,14 +24,14 @@ function Login() {
 
   return (
     <main className="flex flex-col justify-center items-center">
-      <img className="w-[100px] p-[10px]" src={amazingBlack} alt="site-icon" />
-      <form className="flex flex-col border border-[#d3d3d3] w-[230px] rounded-[2px] p-[20px]">
-        <h1 className="text-[20px]">Fazer login</h1>
-        <label className="flex flex-col text-[9px] font-bold mt-[10px]">
+      <img className="w-[8rem] p-[10px]" src={Icon} alt="site-icon" />
+      <form className="flex flex-col border border-[#d3d3d3] w-[22rem] h-[20rem] rounded-[2px] p-[20px]">
+        <h1 className="text-[2rem]">Fazer login</h1>
+        <label className="flex flex-col text-[0.8rem] font-bold mt-[0.8rem]">
           E-mail ou número de telefone celular
           <input
             type="text"
-            className="border border-[#9c9c9c] rounded-[2px] mt-[2px] h-[20px] p-[5px]"
+            className="border border-[#9c9c9c] rounded-[4px] mt-[0.3rem] h-[2rem] p-[5px] focus:shadow-[-4px_-1px_40px_-10px_#FD9A15] focus:border focus:border-[#FD9A15] outline-none"
             onChange={({ target }) => setEmailNumber(target.value)}
           />
         </label>
@@ -39,7 +39,7 @@ function Login() {
           Senha
           <input
             type="password"
-            className="border border-[#9c9c9c] rounded-[2px] mt-[2px] h-[20px] p-[5px]"
+            className="border border-[#9c9c9c] rounded-[4px] mt-[0.3rem] h-[2rem] p-[5px] focus:shadow-[-4px_-1px_40px_-10px_#FD9A15] focus:border focus:border-[#FD9A15] outline-none"
             onChange={({ target }) => setPassword(target.value)}
             />
         </label>
@@ -49,7 +49,7 @@ function Login() {
         }
         <button
           type="button"
-          className="text-[10px] bg-gradient-to-t from-[#f0c14b] to-[#f7dfa5] hover:brightness-[96%] rounded-[2px] border border-[#a88734] mt-[10px] h-[22px]"
+          className="text-[1rem] bg-gradient-to-t from-[#f0c14b] to-[#f7dfa5] hover:brightness-[96%] rounded-[2px] border border-[#a88734] mt-[2rem] h-[2rem]"
           onClick={(e) => {
             e.preventDefault();
             validateInputs();
