@@ -8,8 +8,8 @@ function CartProducts({ setReload }) {
   return (
     <section className="bg-white w-[70%] p-[12px]">
       <div className="flex justify-between border-b border-[#d3d3d3]">
-        <h3 className="font-[500] mb-[10px]">Carrinho de Compras</h3>
-        <p className="text-[10px] self-end text-[#6d6d6d]">Preço</p>
+        <h3 className="font-[500] mb-[0.6rem]">Carrinho de Compras</h3>
+        <p className="text-[1rem] self-end text-[#6d6d6d]">Preço</p>
       </div>
         {
           cartList.map((product) => (
@@ -25,12 +25,12 @@ function CartProducts({ setReload }) {
         }
         <div className="flex justify-end">
           <span
-            className="text-[12px]"
+            className="text-[1rem]"
           >{
             cartList.length === 1 ? `Subtotal (${cartList.length} item):` : `Subtotal (${cartList.length} itens):`
           }
         </span>
-          <span className="text-[12px] font-bold ml-[3px]">{`R$ ${total.toFixed(2)}`}</span>
+          <span className="text-[1rem] font-bold ml-[3px]">{`R$ ${total.toFixed(2)}`}</span>
         </div>
     </section>
   );

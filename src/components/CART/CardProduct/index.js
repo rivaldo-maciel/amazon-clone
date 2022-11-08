@@ -24,21 +24,21 @@ function CardProduct({ title, price, thumbnail, quantity, setReload }) {
   }
 
   return (
-    <div className="grid grid-cols-[100px_auto_auto] border-b border-[#d3d3d3] pb-[12px] w-[100%]">
+    <div className="grid grid-cols-[6.5rem_auto_auto] border-b border-[#d3d3d3] pb-[12px] w-[100%]">
       <div>
         <img
           src={thumbnail}
           alt="product"
-          className="w-[100px]"
+          className="w-[6rem]"
         />
       </div>
-      <div className="ml-[10px]">
-        <p className="text-[14px]">{title}</p>
-        <p className="text-[10px] text-[green]">Em estoque</p>
+      <div className="ml-[0.6rem]">
+        <p className="text-[1rem]">{title}</p>
+        <p className="text-[0.8rem] text-[green]">Em estoque</p>
         <div className="flex">
           <select
             value={quantity}
-            className="text-[12px] h-[20px] shadow-md outline-[#3cc8eb] rounded-[5px] bg-[#e7e7e7] border border-[#9e9e9e]"
+            className="text-[0.8rem] h-[1.8rem] shadow-md outline-[#3cc8eb] rounded-[5px] bg-[#e7e7e7] border border-[#9e9e9e]"
             onChange={({ target }) => {
               setQnty(Number(target.value))
             }}
@@ -49,9 +49,9 @@ function CardProduct({ title, price, thumbnail, quantity, setReload }) {
                 <option className="" key={number}>{number}</option>
               ))}
           </select>
-          <span className="text-[10px] text-[#aaa9a9] self-center ml-[5px]">|</span>
+          <span className="text-[0.8rem] text-[#aaa9a9] self-center ml-[0.3rem]">|</span>
           <span
-            className="text-[10px] ml-[6px] self-center text-[#007185] cursor-pointer"
+            className="text-[10px] ml-[0.2rem] self-center text-[#007185] cursor-pointer"
             onClick={deleteProduct}
           >Excluir</span>
         </div>
