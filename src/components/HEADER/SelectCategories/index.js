@@ -14,7 +14,7 @@ function SelectCategories({ handleChange, setCategory, category }) {
 
   return (
     <select
-      className="z-[1] h-[2.5rem] mr-[-9.2rem] bg-[#f3f3f3] outline-[#ff9735] focus:outline focus:outline-[3.2px] rounded-l-[5px] text-[10px] w-auto cursor-pointer border-r-[1px] border-gray-300"
+      className="text-[0.7rem] z-[1] h-[2.5rem] mr-[-10.2rem] bg-[#f3f3f3] outline-[#ff9735] focus:outline focus:outline-[3.2px] rounded-l-[5px] w-auto cursor-pointer border-r-[1px] border-gray-300"
       onChange={(e) => handleChange(e, setCategory)}
     >
       <option>Todos</option>

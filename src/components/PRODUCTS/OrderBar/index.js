@@ -16,20 +16,20 @@ function OrderProducts() {
   }, [dispatch, results]);
 
   return (
-    <section className="flex items-center justify-between h-[30px] border-b border-[#b4b2b2] shadow-[0_1px_#e2e2e2]">
-      <div className="flex text-[11px] ml-[10px]">
+    <section className="flex items-center justify-between h-[3rem] shadow-[0px_4px_4px_0px_rgba(61,61,61,0.2)]">
+      <div className="flex text-[1rem] ml-[0.8rem]">
         <p>
           {`${results && results.length} resultados para`}
         </p>
         <span
-          className="ml-[4px] text-[#ce6b32] font-bold"
+          className="ml-[0.4rem] text-[#ce6b32] font-bold"
         >
           {`"${query}"`}
         </span>
       </div>
-      <div className="text-[10px]">
+      <div className="text-[0.8rem]">
       <select
-        className="h-[16px] mr-[10px] outline-[#3cc8eb] rounded-[5px] bg-[#e7e7e7] border border-[#9e9e9e]"
+        className="h-[1.5rem] mr-[0.8rem] outline-[#3cc8eb] rounded-[5px] bg-[#e7e7e7] border border-[#9e9e9e]"
         onChange={({target}) => setOrder(target.value)}
       >
           <option selected disabled>Ordenar Por:</option>
