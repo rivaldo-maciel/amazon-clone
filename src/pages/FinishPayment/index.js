@@ -18,11 +18,11 @@ function FinishPayment() {
           <div className="bg-white p-[15px] rounded-[10px] border border-[#d3d2d2]">
             {
               paymentMethod === 'Boleto'
-              ? <h1 className="text-[12px] font-bold">{BankSlipTitle}</h1>
+              ? <h1 className="text-[0.8rem] font-bold">{BankSlipTitle}</h1>
               : (
                 <div className="flex">
-                  <img src={CheckIcon} alt="check" className="w-[14px] h-[14px]" />
-                  <h1 className="text-[12px] text-green-600 font-bold ml-[5px]">{PixTitle}</h1>
+                  <img src={CheckIcon} alt="check" className="w-[0.9rem] h-[0.9rem]" />
+                  <h1 className="text-[0.8rem] text-green-600 font-bold ml-[0.3rem]">{PixTitle}</h1>
                 </div>
               )
             }
