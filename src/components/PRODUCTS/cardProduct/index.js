@@ -5,7 +5,7 @@ function CardProduct({ title, price, thumbnail, id }) {
   return (
       <div className="p-[10px]">
         <div className="flex justify-center">
-          <img className="w-[8rem]" src={thumbnail} alt="product" />
+          <img className="w-[8.1rem]" src={thumbnail} alt="product" />
         </div>
         <div className="mt-[0.8rem]">
           <p className="text-[1rem]">{title}</p>
