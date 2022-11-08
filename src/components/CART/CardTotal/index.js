@@ -14,9 +14,9 @@ function CardTotal() {
     return history.push('/payment-method');
   }
   return (
-    <div className="bg-white p-[20px] ml-[30px] h-[110px]">
+    <div className="bg-white p-[20px] ml-[2rem] h-[8rem]">
       <div>
-        <span className="text-[12px]">
+        <span className="text-[1rem]">
           {
             cartList.length === 1
             ? `Subtotal (${cartList.length} item):`
@@ -24,7 +24,7 @@ function CardTotal() {
           }
         </span>
         <span
-          className="text-[12px] font-bold ml-[3px]"
+          className="text-[1rem] font-bold ml-[0.2rem]"
         >
           {
             `R$ ${total.toFixed(2)}`
@@ -33,7 +33,7 @@ function CardTotal() {
       </div>
       <button
         type="button"
-        className="bg-[#FFD814] hover:bg-[#F7CA00] w-[160px] rounded-md text-[12px] p-[2px] mt-[20px]"
+        className="bg-[#FFD814] hover:bg-[#F7CA00] w-[14rem] h-[2rem] rounded-md text-[0.8rem] p-[2px] mt-[1.5rem]"
         onClick={closeOrder}
       >Fechar pedido</button>
     </div>

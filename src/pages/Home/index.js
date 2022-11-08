@@ -12,12 +12,12 @@ function Home() {
     }
   }, []);
   return (
-    <main className="bg-[#b4b3b3]">
+    <>
       <Header />
       <CarouselHome />
       <HomeProducts />
       <Footer />
-    </main>
+    </>
   );
 }
 

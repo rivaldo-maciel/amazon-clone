@@ -25,27 +25,27 @@ function CartSideBar() {
     history.push('/prevcart');
   }
   return (
-    <aside className="bg-white p-[10px] w-[200px] ml-[30px] mt-[30px] rounded-md">
+    <aside className="bg-white p-[10px] w-[17rem] ml-[2rem] mt-[2rem] rounded-md">
       <div>
-        <p className="text-[10px] font-bold">Os clientes que compraram os itens que se encontram em seu histórico recente também compraram</p>
+        <p className="text-[0.8rem] font-bold">Os clientes que compraram os itens que se encontram em seu histórico recente também compraram</p>
       </div>
       {
         products.map((product) => (
           <Link
             to={`/products/${product.id}`}
-            className="flex mt-[10px]"
+            className="flex mt-[0.6rem]"
             key={product.id}
           >
             <div>
-              <img src={product.thumbnail} alt="product" className="w-[60px]" />
+              <img src={product.thumbnail} alt="product" className="w-[5rem]" />
             </div>
-            <div className="flex flex-col ml-[10px]">
-              <span className="text-[12px] truncate w-[100px] text-[#007185]">{product.title}</span>
-              <img src={Stars} alt="stars" className="w-[60px]"/>
-              <span className="text-[12px]">{`R$ ${product.price}`}</span>
+            <div className="flex flex-col ml-[0.6rem]">
+              <span className="text-[0.8rem] truncate w-[10rem] text-[#007185]">{product.title}</span>
+              <img src={Stars} alt="stars" className="w-[4rem]"/>
+              <span className="text-[0.8rem]">{`R$ ${product.price}`}</span>
               <button
                 type="button"
-                className="text-[8px] bg-[#FFD814] hover:bg-[#F7CA00] w-[100px] h-[15px] rounded-md"
+                className="text-[0.6rem] bg-[#FFD814] hover:bg-[#F7CA00] w-[8rem] h-[1.2rem] rounded-md"
                 onClick={() => saveOnCart(product.title, product.price, product.thumbnail)}
               >
                 Adicionar ao carrinho

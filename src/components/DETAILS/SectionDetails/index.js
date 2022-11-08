@@ -25,13 +25,13 @@ function SectionDetails() {
   }, [pictures]);
 
   return (
-    <section className="flex self-center mt-[40px]">
+    <section className="flex self-center mt-[3rem]">
       <AdditionalPhotos
         pictures={pictures && pictures}
         setProductPicture={setProductPicture}
       />
       <div className="flex">
-        <div className="mt-[20px]">
+        <div className="mt-[1.5rem]">
             <InnerImageZoom
               src={productPicture}
               alt="procut"
@@ -41,16 +41,16 @@ function SectionDetails() {
               width={180}
             />
         </div>
-        <div className="ml-[20px]">
-        <div className="w-[270px] border-b border-[#cfcfcf] items-center mt-[8px]">
-          <span>{title}</span>
-          <img src={Stars} alt="stars" className="w-[80px] mb-[5px]"/>
+        <div className="ml-[1.8rem]">
+        <div className="w-[17rem] border-b border-[#cfcfcf] items-center mt-[0.2rem]">
+          <span className="text-[1rem]">{title}</span>
+          <img src={Stars} alt="stars" className="w-[5rem] mb-[0.4rem]"/>
         </div>
-        <div className="mt-[10px]">
-          <span className="text-[10px] relative top-[-7px]">R$</span>
-          <span className="text-[20px]">{price}</span>
+        <div className="mt-[0.8rem]">
+          <span className="text-[0.8rem] relative top-[-0.45rem]">R$</span>
+          <span className="text-[2rem]">{price}</span>
         </div>
-        <div className="flex w-[250px] justify-between">
+        <div className="flex w-[15rem] justify-between">
           {
             dataIcons.map((icon) => (
               <IconDetails

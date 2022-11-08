@@ -8,14 +8,14 @@ function ListProducts() {
   const { results: products } = useSelector(state => state.products);
   const { order } = useContext(productsContext);
   return (
-    <section className="grid grid-cols-6 gap-2 p-[30px]">
+    <section className="grid grid-cols-6 gap-2 p-[30px] place-items-center">
       {
         products 
         && products.sort((a, b) => order === 'Preço: alto a baixo' ? b.price - a.price : a.price - b.price)
         .map((product) => (
           <Link
             to={`/products/${product.id}`}
-            className="w-[150px] h-[250px shadow-md border border-[#e4e4e4]"
+            className="mt-[2rem] w-[12rem] h-[26rem] shadow-md border border-[#e4e4e4]"
             key={product.id}
           >
             <CardProduct
