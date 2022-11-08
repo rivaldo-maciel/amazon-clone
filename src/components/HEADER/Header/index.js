@@ -27,7 +27,7 @@ function Header() {
   }
 
   return (
-    <header className="bg-[#131921] h-10 flex justify-evenly">
+    <header className="bg-[#131921] h-[3.8rem] flex justify-evenly w-[100%]">
         <AppIcon />
       <div className="flex items-center">
         <SelectCategories

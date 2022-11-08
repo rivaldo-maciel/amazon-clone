@@ -3,20 +3,14 @@ import { Link } from 'react-router-dom';
 import CartIcon from '../../../assets/Cart-Icon.svg';
 
 function CartButton() {
-  const cartList = JSON.parse(localStorage.getItem("cart"));
+  const cartList = JSON.parse(localStorage.getItem('cart'));
   return (
-    <button>
-      <Link to="/cart">
-        <div className="text-center">
-          <img src={CartIcon} alt="cart" className="h-7" />
-          <div className="absolute top-[2px] right-[238px] w-[18px]">
-            <span className="text-[#DD5303] font-bold w-auto">
-              {cartList ? cartList.length : 0}
-            </span>
-          </div>
-        </div>
-      </Link>
-    </button>
+    <Link className="flex items-center relative" to="/cart">
+      <img src={CartIcon} alt="cart" className="h-7" />
+      <span className="text-[#f08804] font-bold w-auto absolute left-[0.5rem] top-[0.5rem]">
+        {cartList ? cartList.length : 0}
+      </span>
+    </Link>
   );
 }
 
