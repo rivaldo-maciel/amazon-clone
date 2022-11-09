@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Header from '../../components/HEADER/Header';
 import CarouselHome from '../../components/HOME/CarouselHome';
 import HomeProducts from '../../components/HOME/HomeProducts';
@@ -14,9 +14,11 @@ function Home() {
   return (
     <>
       <Header />
-      <CarouselHome />
-      <HomeProducts />
-      <Footer />
+      <div className="bg-[#EAEDED]">
+        <CarouselHome />
+        <HomeProducts />
+        <Footer />
+      </div>
     </>
   );
 }

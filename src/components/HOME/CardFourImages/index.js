@@ -2,7 +2,7 @@ import React from 'react';
 
 function CardFourImages({ infos }) {
   return (
-    <div className="bg-white w-[19rem] h-[19rem] text-[0.7rem] flex justify-center items-center cursor-pointer">
+    <div className="bg-white w-[19rem] h-[22rem] text-[0.7rem] flex justify-center items-center cursor-pointer">
       <div className="grid grid-cols-[5.7rem_5.7rem] w-[11rem] justify-center gap-2">
         <div className="col-span-2 text-[14px] mb-2 font-bold">{infos.title}</div>
         <div>
