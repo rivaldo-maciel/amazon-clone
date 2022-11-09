@@ -7,7 +7,7 @@ import SearchInput from '../SearchInput';
 import SearchButton from '../SearchButton';
 import CartButton from '../CartButton';
 import { getProducts } from '../../../redux/actions';
-import NavBar from '../../NavBar';
+import NavBar from '../NavBar';
 
 function Header() {
   const [category, setCategory] = useState('Todos');
