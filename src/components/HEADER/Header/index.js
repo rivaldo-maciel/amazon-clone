@@ -7,7 +7,7 @@ import SearchInput from '../SearchInput';
 import SearchButton from '../SearchButton';
 import CartButton from '../CartButton';
 import { getProducts } from '../../../redux/actions';
-import NavBar from '../../NavBar';
+import NavBar from '../NavBar';
 
 function Header() {
   const [category, setCategory] = useState('Todos');
@@ -36,7 +36,7 @@ function Header() {
     <header className="bg-[#131921] w-[100%]">
       <div className="flex justify-evenly h-[3.8rem]">
         <AppIcon />
-        <div className="flex items-center">
+        <div className="flex items-center relative">
           <SelectCategories
             handleChange={handleChange}
             setCategory={setCategory}
@@ -46,6 +46,7 @@ function Header() {
             handleChange={handleChange}
             setQuery={setQuery}
             query={query}
+            category={category}
           />
           <SearchButton searchProducts={searchProducts} />
         </div>

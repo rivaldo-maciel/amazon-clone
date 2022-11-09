@@ -22,10 +22,15 @@ function ConfirmRequest() {
   const cartProducts = JSON.parse(localStorage.getItem("cart"));
   const total = cartProducts.reduce((acc, curr) => acc + curr.price * curr.quantity, 0);
 
+  const clearCart = () => {
+    localStorage.setItem('cart', JSON.stringify([]));
+  }
+
   const finishPayment = () => {
     const endTotal = total + Number(freight);
     localStorage.setItem('endTotal', JSON.stringify(endTotal));
     history.push('/finish-payment');
+    clearCart();
   }
 
   return (
@@ -156,7 +161,7 @@ function ConfirmRequest() {
           }
           <div className='w-[100%] flex justify-between mt-[0.3rem] text-[0.9rem] font-bold text-[#b12704]'>
             <span>Total do pedido:</span>
-            <span>{`R$ ${total + Number(freight)}`}</span>
+            <span>{`R$ ${(total + Number(freight)).toFixed(2)}`}</span>
           </div>
         </div>
       </section>
