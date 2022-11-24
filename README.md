@@ -50,6 +50,7 @@ Este projeto é um clone simplificado do site [www.amazon.com.br](https://www.am
 
 - Implomentar testes unitários e de integração
 - Deploy
+- Design responsivo
 
 
 
